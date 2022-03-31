@@ -16,7 +16,6 @@ addBtn.addEventListener("click" , function(e){
     notesObj.push(addTxt.value);
     localStorage.setItem("notes",JSON.stringify(notesObj));
     addTxt.value = "";
-    console.log(notesObj);
     showNotes();
 });
 
@@ -40,8 +39,7 @@ function showNotes(){
     </div> `
     });
     let notesElement=document.getElementById("notes");
-    console.log(notes.length);
-    if(notes.length!=0){
+    if(notesObj.length!=0){
         notesElement.innerHTML=html;
     }
     else{
